@@ -1,0 +1,62 @@
+    angular-front end technology
+--------basic commands
+      -------------------
+     1.creation of angular project-ng new project-name
+     2.to run angular project-ng serve
+     3.component creation-ng g c component-name
+     4.service creation-ng g s Service-name
+
+
+     ----------basic concepts
+                --------------
+        1.module-to import 3rd party library 
+
+        2.components-html,css,ts
+
+        3.to set up path for component-App routing module file
+
+        4.routing-outlet selector
+
+        5.angular service 
+
+        6.dependency injection - inside constructor
+
+                   syntax:access-specifier object-name:dependent class name
+
+        7.asynchronous - rxjs - observable - subscribe()
+
+        8.data binding- sharing data inside a component
+             
+             1.one way Binding-
+
+                1.component to view
+
+                   1.string interpolation - {{variable - name}}
+                   2.property binding - [attribute]="property-name"
+
+                2.view to component
+
+                  1.event binding - (event)="function-call"
+                  2.event binding using $event - (event)="funcyion-call($event)
+                  3.template reference variable,#variable-name
+
+
+              3.two way binding
+              1.ngModel (tmplate driven forms)
+                -import formsModule,, [(ngModel)]="variable-name"
+
+        9.angular directive - to manipulate DOM
+           
+            1.component directive
+
+            2.structural directive - to add/remove html elements
+
+                1. *ngIf="condition"
+                2. *ngFor="let variable-name of array-name"
+
+        10.ActivatedRoute - provide access to information about a route 
+        asssociated with a component
+
+        11.router class-
+
+        12.pipe-

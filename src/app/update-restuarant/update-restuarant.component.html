@@ -1,0 +1,67 @@
+<div class="container mt-5 mb-3 border border-light p-3">
+    <h3 class="text-center text-light mt-4">Update Restuarant Details</h3>
+    <form  #updateRestForm="ngForm"  (ngSubmit)="updateRestuarant(updateRestForm)">
+        <div class="row p-5">
+            <div class="col-md 6">
+                <div class="mb-2">
+                    <input name="id" [(ngModel)]="restBody.id" type="text" class="form-control" placeholder="Restaurant Id ">
+                </div>
+                <div class="mb-2">
+                    <input  name="photograph" [(ngModel)]="restBody.photograph" type="text" class="form-control" placeholder="Restaurant Image">
+                </div>
+                <div class="mb-2">
+                    <input name="neighborhood" [(ngModel)]="restBody.neighborhood" type="text" class="form-control" placeholder="Restaurant Neighborhood">
+                </div>
+                <div class="mb-2">
+                    <label class="text-light" for="">Operating Hours</label>
+
+                    <div class="mb-2">
+                        <input name="Monday" [(ngModel)]="restBody.operating_hours.Monday" type="text" class="form-control mb-2" placeholder="Monday">
+                        <input name="Tuesday" [(ngModel)]="restBody.operating_hours.Tuesday" type="text" class="form-control mb-2" placeholder="Tuesday">
+                        <input name="Wednesday" [(ngModel)]="restBody.operating_hours.Wednesday" type="text" class="form-control mb-2" placeholder="Wednesday">
+                        <input name="Thursday" [(ngModel)]="restBody.operating_hours.Thursday" type="text" class="form-control mb-2" placeholder="Thursday">
+                        <input name="Friday" [(ngModel)]="restBody.operating_hours.Friday" type="text" class="form-control mb-2" placeholder="Friday">
+                        <input name="Saturday" [(ngModel)]="restBody.operating_hours.Saturday" type="text" class="form-control mb-2" placeholder="Saturday">
+                        <input name="Sunday" [(ngModel)]="restBody.operating_hours.Sunday" type="text" class="form-control mb-2" placeholder="Sunday">
+
+                    </div>
+            
+            </div>
+        </div>
+        <div class="col-md 6">
+            <div class="mb-2">
+
+                <input name="rName" [(ngModel)]="restBody.name" type="text" class="form-control" placeholder="Restaurant name">
+            </div>
+            <div class="mb-2">
+                <input name="address" [(ngModel)]="restBody.address" type="text" class="form-control" placeholder="Restaurant Address">
+            </div>
+            <div class="mb-2">
+                <input name="cuisine_type" [(ngModel)]="restBody.cuisine_type" type="text" class="form-control" placeholder="Restaurant Cuisine Type">
+            </div>
+            <div class="mb-2">
+                <div class="border m-2 p-2" *ngFor="let review of restBody['reviews']">
+                <label class="text-light mb-2"  for="">Reviews</label>
+
+                    <input name="rvname" [(ngModel)]="review.name" type="text" class="form-control mb-2" placeholder="Name">
+                    <input name="date" [(ngModel)]="review.date" type="text" class="form-control mb-2" placeholder="Date">
+                    <input name="rating" [(ngModel)]="review.rating" type="text" class="form-control mb-2" placeholder="Rating">
+                    <input name="comments" [(ngModel)]="review.comments" type="text" class="form-control mb-2" placeholder="Comments">
+                
+                </div>
+                <div class="mb-2">
+                    <label class="text-light" for="">Location</label>
+                    <input name="lat" [(ngModel)]="restBody.latlng.lat" type="text" class="form-control mb-2"placeholder="Latitude">
+                    <input name="lng" [(ngModel)]="restBody.latlng.lng" type="text" class="form-control mb-2"placeholder="Longitude">
+
+
+                </div>
+        
+        </div>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-dark mb-2">Update Restaurant</button>
+        </div>
+</div>
+</form>
+</div>
